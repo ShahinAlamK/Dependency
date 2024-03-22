@@ -1,1 +1,2 @@
-https://www.google.com/imgres?imgurl=https%3A%2F%2Fstackify.com%2Fwp-content%2Fuploads%2F2018%2F06%2FDesign-Patterns-Explained-%25E2%2580%2593-Dependency-Injection-with-Code-Examples-881x440-1.png&tbnid=U9x1RNS-Effi0M&vet=12ahUKEwiourqloYeFAxWP7TgGHUKYANYQMygKegUIARCEAQ..i&imgrefurl=https%3A%2F%2Fstackify.com%2Fdependency-injection%2F&docid=AVgljCwXHjAX8M&w=881&h=440&q=dependency%20injection&ved=2ahUKEwiourqloYeFAxWP7TgGHUKYANYQMygKegUIARCEAQ
+
+![download](https://github.com/ShahinAlamK/Dependency/assets/91818093/55caee26-e707-4d7f-9504-518c796c1f7d)
