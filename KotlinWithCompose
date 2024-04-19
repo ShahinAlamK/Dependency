@@ -12,6 +12,9 @@ implementation("com.google.accompanist:accompanist-systemuicontroller:0.35.0-alp
 //Navigation
 implementation("androidx.navigation:navigation-compose:2.7.6")
 
+//Permission Handeler
+implementation("com.google.accompanist:accompanist-permissions:0.33.1-alpha")
+
 //Networkd Image
 implementation("io.coil-kt:coil-compose:2.6.0")
 
