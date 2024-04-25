@@ -18,6 +18,9 @@ implementation("com.google.accompanist:accompanist-permissions:0.33.1-alpha")
 //Networkd Image
 implementation("io.coil-kt:coil-compose:2.6.0")
 
+//Animation
+implementation ("androidx.compose.animation:animation:1.6.0-alpha04")
+
 //dagger hilt
 implementation("com.google.dagger:hilt-android:2.48.1")
 kapt("com.google.dagger:hilt-android-compiler:2.48")
