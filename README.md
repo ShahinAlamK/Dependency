@@ -1,2 +1,77 @@
 
-![download](https://github.com/ShahinAlamK/Dependency/assets/91818093/55caee26-e707-4d7f-9504-518c796c1f7d)
+#Libs Version
+
+[versions]
+daggerHilt = "2.59.2"
+androidxHilt = "1.3.0"
+room = "2.8.4"
+firebaseBom = "33.1.1"
+ksp = "2.3.5"
+navigationCompose = "2.9.0"
+googleServices = "4.4.4"
+firebaseFirestore = "26.1.1"
+---------------------------------------------------------------------------------------------------
+#libraries
+#Hilt
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "daggerHilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "daggerHilt" }
+hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "androidxHilt" }
+androidx-hilt-compiler = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "androidxHilt" }
+
+#Room
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+
+#Firebase
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-auth-ktx = { module = "com.google.firebase:firebase-auth-ktx" }
+firebase-bom-v3311 = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-firestore-ktx = { module = "com.google.firebase:firebase-firestore-ktx" }
+firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
+
+-------------------------------------------------------------------------------------------
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+
+#Dagger Hilt
+dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "daggerHilt" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+google-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }
+
+
+----------------------------------------------------------------------------------------------------
+#Project Build Gradle
+    alias(libs.plugins.ksp) apply false
+    alias(libs.plugins.dagger.hilt.android) apply false
+    alias(libs.plugins.google.services) apply false
+
+-------------------------------------------------------
+
+#Module Build Gradle
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.dagger.hilt.android)
+    alias(libs.plugins.google.services)
+}
+--------------------------------------------------------
+#Dependencies
+    //Hilt
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+    ksp(libs.androidx.hilt.compiler)
+    implementation(libs.hilt.navigation.compose)
+
+    //Room
+    implementation(libs.room.runtime)
+    implementation(libs.room.ktx)
+    ksp(libs.room.compiler)
+
+    //Firebase
+    implementation(platform(libs.firebase.bom.v3311))
+    implementation(libs.firebase.analytics)
+    implementation (libs.firebase.auth.ktx)
+    implementation (libs.firebase.firestore.ktx)
